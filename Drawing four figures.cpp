@@ -1,6 +1,6 @@
 #include <GL/glut.h>
 
-void  display(){
+void  bts(){
 	glClear(GL_COLOR_BUFFER_BIT);
 	
 	glColor3f(1.0f,1.0f,1.0f); //color
@@ -56,7 +56,7 @@ int main(int argc, char** argv){
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowSize(640, 640);
 	glutCreateWindow("BTS");
-	glutDisplayFunc(display);
+	glutDisplayFunc(bts);
 	gluOrtho2D(0, 640, 0, 640);
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glutMainLoop();      
