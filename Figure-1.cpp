@@ -10,11 +10,15 @@ void display(void){
 			glVertex2i(2,4);
 		glEnd();
 
+	glBegin(GL_LINE_LOOP);
+		glVertex2f(-4, -9);
+		glVertex2f(0, -9);
+		glVertex2f(0, -6);
+	glEnd();
 	
 	glBegin(GL_LINE_LOOP);
 		glVertex2f(0, 3);
-		glVertex2f(0, -9);
-		glVertex2f(-4, -9);
+		glVertex2f(0, -6);
 		glVertex2f(5, -2);
 	glEnd();
 	
