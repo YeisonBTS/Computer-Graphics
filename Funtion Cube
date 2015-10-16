@@ -1,0 +1,40 @@
+#include <GL/glut.h>
+
+
+using namespace std;
+
+void bts(void){
+	glClearColor(1.0,1.0,1.0,0.0);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(0.0 ,0.0 ,1.0);
+	glOrtho(-10.0,10.0,-10.0,10.0,-10.0,10.0);
+	
+	glBegin(GL_LINE_STRIP);
+		glVertex2f(0, 7);
+		glVertex2f(0,-7);
+	glEnd();
+	
+	glBegin(GL_LINE_STRIP);
+		glVertex2f(-7, 0);
+		glVertex2f(7, 0);
+	glEnd();
+	
+	
+	glColor3f(1.0 ,0.0 ,1.0);
+	glBegin(GL_LINE_STRIP);
+		for(double i = -7; i < 7; i+=0.01){
+			glColor3f(1.0, 0.0, 0.0);
+			glVertex2f(i, i*i*i);
+		}	
+	
+	glutSwapBuffers();
+}
+
+int main(){
+	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGB);
+	glutInitWindowSize(400,400);
+	glutInitWindowPosition(100,100);
+	glutCreateWindow("FIGURA FUNTION CUBE");
+	glutDisplayFunc(bts);
+	glutMainLoop();
+}
